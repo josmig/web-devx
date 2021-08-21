@@ -12,6 +12,12 @@ const yargs = require('yargs')
         default:false,
         describe:'Muestra la tabla en consola'
     })
+    .option('h', {
+        alias:'hasta',
+        type:'number',
+        default:10,
+        describe:'Hasta que valor quieres que se multiplique'
+    })
     .check( (argv, options) =>{
         if(isNaN (argv.b)){
             throw 'La base tiene que ser de tipo Number';
